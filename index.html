@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
     <link rel="stylesheet" href="src/style.css" />
+    <link href="
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Concert+One&family=Lato&family=Playpen+Sans:wght@400;500;600&family=Questrial&family=Rubik+Doodle+Shadow&family=Space+Mono&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
@@ -19,7 +26,7 @@
         <input type="submit" value="search" id="search-button" />
       </form>
 
-      <div>
+      <div class="current-time-details">
         <span class="current-day">Monday</span>,
         <span class="current-date">27th April</span>,
         <span class="current-time"></span>03:13
@@ -30,7 +37,9 @@
 
       <p class="weather-details">
         <span id="current-humidity"> Humidity: 15% </span>
-        <span id="current-temperature">10 ℃/℉</span>
+        <span id="current-temperature"
+          >10 <span class="weather-units">℃</span></span
+        >
         <span id="current-wind"> Wind: 12km/h </span>
       </p>
       <audio src="">🔉</audio>
