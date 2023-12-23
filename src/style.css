@@ -22,15 +22,23 @@ padding-top: 10px;
 }
 
 #enter-a-city {
-    width: 300px;
-    border-radius: 10px;
-    padding: 2px;
+    width:500px;
+    border-radius: 12px;
+    padding: 4px;
+    border: none;
+    font-size: 14px;
+    
 }
 
 #search-button {
-    border-radius: 9px;
-    padding: 2px 4px;
+    border-radius: 14px;
+    padding: 4px 10px;
+    font-size: 14px;
+    background-color: #BBBCC1;
+
 }
+
+
 
 
 
@@ -40,5 +48,8 @@ padding-top: 10px;
 
 footer {
     text-align: center;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.8);
+    
 
 }

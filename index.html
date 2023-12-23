@@ -12,19 +12,27 @@
       <form>
         <input
           type="Search"
-          placeholder="Enter a city..."
+          placeholder=" enter a city..."
           required
           id="enter-a-city"
         />
-        <input type="submit" value="Search" id="search-button" />
+        <input type="submit" value="search" id="search-button" />
       </form>
 
-      <div>Monday, 27th April, 3:13</div>
+      <div>
+        <span class="current-day">Monday</span>,
+        <span class="current-date">27th April</span>,
+        <span class="current-time"></span>03:13
+      </div>
       <h1>London</h1>
 
-      <div>⛈️</div>
+      <div class="weather-icon">⛈️</div>
 
-      <p>Humidity: 15% <span>10 ℃/℉</span> Wind: 12km/h</p>
+      <p class="weather-details">
+        <span id="current-humidity"> Humidity: 15% </span>
+        <span id="current-temperature">10 ℃/℉</span>
+        <span id="current-wind"> Wind: 12km/h </span>
+      </p>
       <audio src="">🔉</audio>
       <hr />
     </div>
