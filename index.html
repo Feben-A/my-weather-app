@@ -12,14 +12,15 @@
       href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Concert+One&family=Lato&family=Playpen+Sans:wght@400;500;600&family=Questrial&family=Rubik+Doodle+Shadow&family=Space+Mono&display=swap"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
   </head>
 
   <body>
     <div class="container">
-      <form>
+      <form id="search-city-form">
         <input
           type="Search"
-          placeholder=" enter a city..."
+          placeholder="enter a city..."
           required
           id="enter-a-city"
         />
@@ -37,13 +38,13 @@
 
       <p class="weather-details">
         <span id="current-humidity"> Humidity: 15% </span>
-        <span id="current-temperature"
-          >10 <span class="weather-units">℃</span></span
-        >
+        <span id="current-temperature">10 </span
+        ><span class="weather-units">℃</span>
         <span id="current-wind"> Wind: 12km/h </span>
       </p>
       <audio src="">🔉</audio>
       <hr />
+      respoci
     </div>
     <footer>
       This project was coded by
@@ -51,5 +52,6 @@
       <a href="#" target="_blank">open-sourced on Github </a> and
       <a href="#" target="_blank">hosted on Netlify</a>.
     </footer>
+    <script src="src/app.js"></script>
   </body>
 </html>

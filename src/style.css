@@ -10,12 +10,11 @@ body {
     border: none;
     border-radius: 10px;
     text-align: center;
-    padding: 10px 30px;
+    padding: 10px 20px;
     max-width: 750px;
     background: grey;
     margin-bottom: 20px;
 }
-
 
 form {
 padding-bottom: 10px;
@@ -26,9 +25,10 @@ margin-top: 7px;
 #enter-a-city {
     width: 500px;
     border-radius: 12px;
-    padding: 4px;
+    padding: 4px 10px;
     border: none;
     font-size: 14px;
+    
     
 }
 
@@ -81,12 +81,9 @@ p {
 
 }
 
-
-
-
 footer {
     text-align: center;
     font-size: 15px;
     color: rgba(0, 0, 0, 0.8);
-    margin-top: 0px;
+    margin-top: 2px;
 }
