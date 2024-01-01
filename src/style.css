@@ -86,3 +86,17 @@ footer {
     color: rgba(0, 0, 0, 0.8);
     margin-top: 2px;
 }
+
+.weather-forecast {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.weather-forecast-day {
+    color:rgba(0, 0, 0, 0.7);
+}
+
+.weather-forecast-temperature-min {
+    color: rgba(0, 0, 0, 0.6);
+}

@@ -1,6 +1,5 @@
 
 function displayDetails(response) {
-    event.preventDefault();
    let h1 = document.querySelector("h1");
    let city = response.data.city;
    h1.innerHTML = `${city}`;
@@ -44,8 +43,6 @@ function formatDate (date) {
  let currentTime = document.querySelector("#current-time");
  currentTime.innerHTML = `${day} ~ ${hours}:${minutes} ~`
 
-
-
 }
 
 function cityDetails(city) {
@@ -57,6 +54,7 @@ function cityDetails(city) {
 
 
 function searchCity(event) {
+    event.preventDefault();
     let cityInput = document.querySelector("#enter-a-city");
     cityDetails(cityInput.value);
 
