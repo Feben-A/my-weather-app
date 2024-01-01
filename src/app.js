@@ -1,5 +1,6 @@
 
 function displayDetails(response) {
+    event.preventDefault();
    let h1 = document.querySelector("h1");
    let city = response.data.city;
    h1.innerHTML = `${city}`;
@@ -17,8 +18,7 @@ function displayDetails(response) {
    weatherDescription.innerHTML = `${response.data.condition.description}`;
 
   let weatherIcon = document.querySelector("#weather-icon");
-  weatherIcon.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-icon"/>`;
-  console.log(response.data.condition.icon_url);
+  weatherIcon.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-icon" />`;
 
 
   let date = new Date (response.data.time * 1000);
