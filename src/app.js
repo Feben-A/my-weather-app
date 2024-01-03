@@ -17,11 +17,17 @@ function displayDetails(response) {
    weatherDescription.innerHTML = `${response.data.condition.description}`;
 
   let weatherIcon = document.querySelector("#weather-icon");
-  weatherIcon.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-icon" />`;
+  weatherIcon.setAttribute("src", `${response.data.condition.icon_url}`);
+  weatherIcon.setAttribute("alt", response.data.condition.description);
+  //weatherIcon.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-icon" />`;
 
 
   let date = new Date (response.data.time * 1000);
-  formatDate(date); }
+  formatDate(date); 
+
+  getForecast(response.data.city);
+
+}
 
 
 function formatDate (date) {
@@ -60,22 +66,28 @@ function searchCity(event) {
 
 }
 
-let form = document.querySelector("#search-city-form");
-form.addEventListener("submit", searchCity);
 
-function displayForecast() {
-let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+function getForecast (city) {
+    let apiKey = `f230a97a4f6f4577t418b7603o2e6fb5`;
+    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+    
+    axios.get(apiUrl).then(displayForecast);
+}
+
+
+function displayForecast(response,) {
+
 let forecastHtml = "";
 
-days.forEach(function (day) {
+response.data.daily.forEach(function (day) {
 forecastHtml = forecastHtml + `<div class=weather-forecast-day>
-              <div class="weather-forecast-day">${day}</div>
+              <div class="weather-forecast-date">Mon</div>
               <img
-                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAe9JREFUaN7tmdmNwyAQhl1CSkgJlJAGVnIJLsElUAIluAR3sC7Br35LCe6AHVaTyEGAGa6AZKT/Iccw8zEHjtJJKbuW1XTwF0CVAJS1bRsDcU2sy7iSAGDgK0hatOYCiQaAwAZH4LqGqgAgoAch+JdYTQBrAMBSBQDWvQzUBHpq76nXAnQrBcAjAFzaQX0JAJEJ4KW+dYDdp5yCANTGWMcys0RyAKz9vUDw/42dDABPfS0U+FspAYoHnwwg48jMD4Cls38LwPBQOFABhkqC/7jJKQC8QoD3iG0ZQOneOsDYOgD3AWBNA+A9sDRbQhE/Heto4tpXFMDP73YDPahOwYaB7kQbo69gANiMgyTqRghiRxtBCN7qKwhAnd5hQ+mbBfjedLBZPG2cvkIBlsOGT58MKMdaIKMngNMXGQA26LVAes9A1oPN6mlz6osEgDX8tJWBOlXQDBoM7xvLABtaGPZy+goF4Fogd8tpzZbGVZocmWE+voIADM3EHac1Wxp3P9awITPszFcMwGxrJttpYXkYG9eVGZevVAC9Z2aYrXFPMjP7DgkKwIAbj5Qxh58Lrb6dI9XmK8ejRLGRmhzAd8wZ7MaQWzwHwMNnzJ3crFMXuWIzcDrmDHbC1LjFAQ5ZIAWBU4t1idb1T/0FcAF86g/VgX+0644VVAAAAABJRU5ErkJggg=="
+                src="${day.condition.icon_url}"
               class= "weather-forecast-icon"/>
               <div class="weather-forecast-temperatures">
-                <span class="weather-forecast-temperature-max">18°</span>
-                <span class="weather-forecast-temperature-min">13°</span>
+                <span class="weather-forecast-temperature-max">${Math.round(day.temperature.maximum)}°</span>
+                <span class="weather-forecast-temperature-min">${Math.round(day.temperature.minumum)}°</span>
               </div>
               </div>
             </div>`
@@ -86,4 +98,6 @@ forecastElement.innerHTML = forecastHtml;
 
 }
 
-displayForecast();
+let form = document.querySelector("#search-city-form");
+form.addEventListener("submit", searchCity);
+

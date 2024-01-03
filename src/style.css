@@ -55,8 +55,7 @@ h1 {
 }
 
 .weather-icon {
-    font-size: 200px;
-    margin: 0px 0px 0px;
+    width: 30px;
 }
 
 .current-temperature {
