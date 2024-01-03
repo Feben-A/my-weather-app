@@ -9,7 +9,6 @@ body {
     padding: 10px;
     border: none;
     border-radius: 10px;
-    text-align: center;
     padding: 10px 20px;
     max-width: 600px;
     background: grey;
@@ -40,10 +39,11 @@ margin-top: 7px;
 
 }
 
-.current-time-details {
+#current-time-details {
     font-size: 16px;
     margin-top: 3px;
-    color: rgba(0, 0, 0, 0.8)
+    color: rgba(0, 0, 0, 0.8);
+    text-align: center;
 }
 
 h1 {
@@ -51,6 +51,7 @@ h1 {
     margin-bottom: 0px;
     font-size: 40px;
     font-family: Lato;
+    text-align: center;
 }
 
 .weather-icon {
@@ -64,6 +65,7 @@ h1 {
     margin: 0px 0px 10px 15px;
     position: relative;
     bottom: 20px;
+    text-align: center;
 
 }
 
@@ -78,6 +80,7 @@ h1 {
     display:flex;
     justify-content: space-between;
     margin: 10px 70px;
+    text-align: center;
 }
 
 footer {
@@ -88,15 +91,32 @@ footer {
 }
 
 .weather-forecast {
+    display: flex;
+    justify-content: space-around;
     margin-top: 30px;
     margin-bottom: 20px;
-    text-align: center;
 }
 
-.weather-forecast-day {
+
+.weather-forecast-date {
     color:rgba(0, 0, 0, 0.7);
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.weather-forecast-icon {
+   text-align: center;
+    width: 38px;
+    margin: 4px 0px;
+}
+
+.weather-forecast-temperatures {
+   text-align: center;
+   font-size: 15px;
+
 }
 
 .weather-forecast-temperature-min {
     color: rgba(0, 0, 0, 0.6);
+    padding: 0px;
 }
