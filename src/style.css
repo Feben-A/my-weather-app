@@ -63,9 +63,11 @@ h1 {
 }
 
 #weather-icon {
-    width: 200px;
+    width: 300px;
     display: block;
     margin: 0 auto;
+    padding: 2px;
+
 }
 
 .current-temperature {
@@ -75,6 +77,7 @@ h1 {
     position: relative;
     bottom: 20px;
     text-align: center;
+    padding: 10px;
 
 }
 
@@ -90,12 +93,13 @@ h1 {
     justify-content: space-between;
     margin: 10px 70px;
     text-align: center;
-    font-family: Lato;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 14px
 }
 
 #current-humidity, #current-wind {
     font-weight: bolder;
+    margin-top: 3px;
 }
 
 footer {
@@ -125,6 +129,7 @@ footer {
     line-height: 20px;
     font-weight: 300;
     font-family: Lato;
+    text-align: center;
 }
 
 .weather-forecast-icon {
@@ -136,10 +141,20 @@ footer {
 .weather-forecast-temperatures {
    text-align: center;
    font-size: 15px;
+   display: flex;
+   justify-content: space-between;
+   font-weight: 700;
+   margin: 0px 2px;
+   margin-top: 5px;
+   font-family:Arial, Helvetica, sans-serif;
 
 }
 
+.weather-forecast-temperature-max {
+    font-weight: 900;
+}
 .weather-forecast-temperature-min {
     color: white;
     padding: 0px;
+
 }
