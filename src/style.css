@@ -14,6 +14,8 @@ body {
     margin-bottom: 20px;
     background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/109/142/original/storm-sky-cloudy-weather.jpg?1704331784");
     color: white;
+    background-repeat:no-repeat;
+    background-size: 1500px;
 
 
 }
@@ -63,7 +65,7 @@ h1 {
 }
 
 #weather-icon {
-    width: 300px;
+    width: 200px;
     display: block;
     margin: 0 auto;
     padding: 2px;
@@ -143,7 +145,6 @@ footer {
    font-size: 15px;
    display: flex;
    justify-content: space-between;
-   font-weight: 700;
    margin: 0px 2px;
    margin-top: 5px;
    font-family:Arial, Helvetica, sans-serif;
@@ -151,10 +152,11 @@ footer {
 }
 
 .weather-forecast-temperature-max {
-    font-weight: 900;
+    font-weight:bold;
 }
 .weather-forecast-temperature-min {
     color: white;
     padding: 0px;
+    font-weight:lighter;
 
 }
